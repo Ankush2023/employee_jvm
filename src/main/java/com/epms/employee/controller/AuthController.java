@@ -42,7 +42,7 @@ public class AuthController {
             }
             LoginResponse loginResponse = new LoginResponse();
             loginResponse.setToken(token);
-            loginResponse.setEmployeeId(employee.getEmployeeId());
+            loginResponse.setEmployeeId(employee.getId());
             loginResponse.setEmployeeName(employee.getEmployeeName());
             return new ResponseEntity<>(new EntityResponse(loginResponse, 0), HttpStatus.OK);
         } catch (Exception e) {
